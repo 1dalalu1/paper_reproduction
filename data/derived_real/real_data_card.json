@@ -1,0 +1,88 @@
+{
+  "kind": "real",
+  "source": "huggingface.co/datasets/withmartian/routerbench",
+  "files": [
+    "routerbench_0shot.pkl",
+    "routerbench_5shot.pkl"
+  ],
+  "shot_map": {
+    "mmlu": 5,
+    "hellaswag": 5,
+    "winogrande": 5,
+    "gsm8k": 5,
+    "arc": 5,
+    "mbpp": 0,
+    "mt_bench": 0
+  },
+  "split_filter": {
+    "arc": "test"
+  },
+  "aggregate_mode": "macro",
+  "n_rows": 379280,
+  "per_dataset": [
+    {
+      "dataset": "mmlu",
+      "shot": 5,
+      "n_samples": 14042,
+      "n_models": 11,
+      "n_rows": 154462,
+      "perf_mean": 0.604672994004998,
+      "cost_sum": 388.727519528
+    },
+    {
+      "dataset": "mt_bench",
+      "shot": 0,
+      "n_samples": 80,
+      "n_models": 11,
+      "n_rows": 880,
+      "perf_mean": 0.6292045454545455,
+      "cost_sum": 3.976945756
+    },
+    {
+      "dataset": "mbpp",
+      "shot": 0,
+      "n_samples": 427,
+      "n_models": 11,
+      "n_rows": 4697,
+      "perf_mean": 0.5156482861400894,
+      "cost_sum": 9.090742379999998
+    },
+    {
+      "dataset": "hellaswag",
+      "shot": 5,
+      "n_samples": 10042,
+      "n_models": 11,
+      "n_rows": 110462,
+      "perf_mean": 0.6833119081675146,
+      "cost_sum": 244.17075548
+    },
+    {
+      "dataset": "winogrande",
+      "shot": 5,
+      "n_samples": 1267,
+      "n_models": 11,
+      "n_rows": 13937,
+      "perf_mean": 0.6064432804764297,
+      "cost_sum": 14.041921116
+    },
+    {
+      "dataset": "gsm8k",
+      "shot": 5,
+      "n_samples": 7450,
+      "n_models": 11,
+      "n_rows": 81950,
+      "perf_mean": 0.5607962172056131,
+      "cost_sum": 166.11216205199997
+    },
+    {
+      "dataset": "arc",
+      "shot": 5,
+      "n_samples": 1172,
+      "n_models": 11,
+      "n_rows": 12892,
+      "perf_mean": 0.7862240148929569,
+      "cost_sum": 18.493292775999997
+    }
+  ],
+  "note": "直接由公开 pkl 转换，未经任何重采样；RAG 子集与论文自建的 800 条 Martian 查询不同，默认丢弃。"
+}

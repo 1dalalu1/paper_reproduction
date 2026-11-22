@@ -1,0 +1,21 @@
+{
+  "paths": {
+    "raw_dir": "data/raw",
+    "surrogate": "data/surrogate/routerbench_surrogate.csv",
+    "derived_dir": "data/derived",
+    "tables_dir": "results/tables",
+    "figures_dir": "results/figures"
+  },
+  "data": {
+    "source": "surrogate",
+    "seed": 20240501,
+    "cost_cv": 0.6
+  },
+  "metrics": {
+    "domain_mode": "intersection"
+  },
+  "figure": {
+    "dpi": 300,
+    "figsize": [18.0, 7.6]
+  }
+}

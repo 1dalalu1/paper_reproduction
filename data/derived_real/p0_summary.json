@@ -1,0 +1,1170 @@
+{
+  "step0_surrogate": {
+    "status": "skipped"
+  },
+  "step1_validate": {
+    "path": "E:\\论文复现\\RouterBench\\data\\real\\routerbench_long.pkl",
+    "source": "real",
+    "report": {
+      "n_rows": 379280,
+      "n_datasets": 7,
+      "n_models": 11,
+      "per_dataset": {
+        "arc": {
+          "n_samples": 1172,
+          "n_rows": 12892
+        },
+        "gsm8k": {
+          "n_samples": 7450,
+          "n_rows": 81950
+        },
+        "hellaswag": {
+          "n_samples": 10042,
+          "n_rows": 110462
+        },
+        "mbpp": {
+          "n_samples": 427,
+          "n_rows": 4697
+        },
+        "mmlu": {
+          "n_samples": 14042,
+          "n_rows": 154462
+        },
+        "mt_bench": {
+          "n_samples": 80,
+          "n_rows": 880
+        },
+        "winogrande": {
+          "n_samples": 1267,
+          "n_rows": 13937
+        }
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "markdown": "E:\\论文复现\\RouterBench\\results_real\\tables\\data_validation.md",
+    "per_dataset": [
+      {
+        "dataset": "mmlu",
+        "n_samples": 14042,
+        "n_models": 11,
+        "n_rows": 154462,
+        "perf_mean": 0.604672994004998,
+        "cost_sum": 388.727519528
+      },
+      {
+        "dataset": "mt_bench",
+        "n_samples": 80,
+        "n_models": 11,
+        "n_rows": 880,
+        "perf_mean": 0.6292045454545455,
+        "cost_sum": 3.976945756
+      },
+      {
+        "dataset": "mbpp",
+        "n_samples": 427,
+        "n_models": 11,
+        "n_rows": 4697,
+        "perf_mean": 0.5156482861400894,
+        "cost_sum": 9.090742379999998
+      },
+      {
+        "dataset": "hellaswag",
+        "n_samples": 10042,
+        "n_models": 11,
+        "n_rows": 110462,
+        "perf_mean": 0.6833119081675146,
+        "cost_sum": 244.17075548
+      },
+      {
+        "dataset": "winogrande",
+        "n_samples": 1267,
+        "n_models": 11,
+        "n_rows": 13937,
+        "perf_mean": 0.6064432804764297,
+        "cost_sum": 14.041921116
+      },
+      {
+        "dataset": "gsm8k",
+        "n_samples": 7450,
+        "n_models": 11,
+        "n_rows": 81950,
+        "perf_mean": 0.5607962172056131,
+        "cost_sum": 166.11216205199997
+      },
+      {
+        "dataset": "arc",
+        "n_samples": 1172,
+        "n_models": 11,
+        "n_rows": 12892,
+        "perf_mean": 0.7862240148929569,
+        "cost_sum": 18.493292775999997
+      }
+    ]
+  },
+  "step2_table1": {
+    "table1_csv": "E:\\论文复现\\RouterBench\\results_real\\tables\\table1_reproduced.csv",
+    "summary": {
+      "n_cells": 77,
+      "perf_pass": 44,
+      "cost_pass": 1,
+      "perf_pass_rate": 0.5714285714285714,
+      "cost_pass_rate": 0.012987012987012988,
+      "max_abs_perf_diff": 0.3643607188703465,
+      "max_rel_cost_diff": 29.556612345679017,
+      "worst_cells": [
+        {
+          "dataset": "MT-Bench",
+          "model": "Yi 34B",
+          "perf_diff": -0.3643607188703465,
+          "perf_z": 13.513855779675222
+        },
+        {
+          "dataset": "MT-Bench",
+          "model": "Claude V1",
+          "perf_diff": -0.36373384681215226,
+          "perf_z": 13.490605582417379
+        },
+        {
+          "dataset": "MT-Bench",
+          "model": "Mixtral 8x7B",
+          "perf_diff": -0.35947454000855805,
+          "perf_z": 11.919821981272097
+        },
+        {
+          "dataset": "MT-Bench",
+          "model": "Llama 70B",
+          "perf_diff": -0.3491283697047496,
+          "perf_z": 8.843512025152194
+        },
+        {
+          "dataset": "MT-Bench",
+          "model": "WizardLM 13B",
+          "perf_diff": -0.33811810012836974,
+          "perf_z": 7.504846190541695
+        }
+      ],
+      "oracle_row": {
+        "perf_pass": 6,
+        "cost_pass": 0,
+        "max_abs_perf_diff": 0.07725000000000004,
+        "detail": [
+          {
+            "dataset": "MMLU",
+            "perf_repro": 0.9656744053553625,
+            "perf_paper": 0.957,
+            "perf_diff": 0.008674405355362569,
+            "cost_repro": 8.769935603999999,
+            "cost_paper": 0.297
+          },
+          {
+            "dataset": "MT-Bench",
+            "perf_repro": 0.91875,
+            "perf_paper": 0.996,
+            "perf_diff": -0.07725000000000004,
+            "cost_repro": 0.27876979599999996,
+            "cost_paper": 0.052
+          },
+          {
+            "dataset": "MBPP",
+            "perf_repro": 0.8665105386416861,
+            "perf_paper": 0.899,
+            "perf_diff": -0.032489461358313876,
+            "cost_repro": 0.20618304800000004,
+            "cost_paper": 0.041
+          },
+          {
+            "dataset": "HellaSwag",
+            "perf_repro": 0.9844652459669389,
+            "perf_paper": 0.994,
+            "perf_diff": -0.009534754033061144,
+            "cost_repro": 3.231970848,
+            "cost_paper": 0.86
+          },
+          {
+            "dataset": "Winogrande",
+            "perf_repro": 0.9992107340173638,
+            "perf_paper": 1.0,
+            "perf_diff": -0.0007892659826361781,
+            "cost_repro": 0.135662024,
+            "cost_paper": 0.042
+          },
+          {
+            "dataset": "GSM8K",
+            "perf_repro": 0.7493959731543625,
+            "perf_paper": 0.748,
+            "perf_diff": 0.001395973154362462,
+            "cost_repro": 4.319168376,
+            "cost_paper": 1.282
+          },
+          {
+            "dataset": "ARC-Challenge",
+            "perf_repro": 0.9880546075085325,
+            "perf_paper": 0.977,
+            "perf_diff": 0.011054607508532488,
+            "cost_repro": 0.26801254399999996,
+            "cost_paper": 0.091
+          }
+        ]
+      }
+    }
+  },
+  "step3_figure3": {
+    "figures": [
+      "E:\\论文复现\\RouterBench\\results_real\\figures\\figure3_cost_quality.png",
+      "E:\\论文复现\\RouterBench\\results_real\\figures\\figure3_cost_quality_logx.png",
+      "E:\\论文复现\\RouterBench\\results_real\\figures\\figure3_oracle_selection.png"
+    ],
+    "aiq": [
+      {
+        "dataset": "mmlu",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.0002642931420025637,
+        "perf_mean": 0.5392640407136178,
+        "aiq": 0.5383497476515261,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00017626303945306938,
+        "perf_mean": 0.5312748861532453,
+        "aiq": 0.5312748861532453,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.0005287889047144281,
+        "perf_mean": 0.6982405875604891,
+        "aiq": 0.688751768362461,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0006839005930779091,
+        "perf_mean": 0.5344541780718975,
+        "aiq": 0.5228093676579305,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0007042523287281014,
+        "perf_mean": 0.7242818821571475,
+        "aiq": 0.707703696610402,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0008813160518444667,
+        "perf_mean": 0.6794216775084196,
+        "aiq": 0.6572622413768368,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0007067101552485401,
+        "perf_mean": 0.4302134011547672,
+        "aiq": 0.42030886302345466,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.0007931834852585102,
+        "perf_mean": 0.6161174260415265,
+        "aiq": 0.599022957720039,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.007058521578122774,
+        "perf_mean": 0.5020080749529623,
+        "aiq": 0.307218206663803,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.007062767127189859,
+        "perf_mean": 0.5963765182714728,
+        "aiq": 0.36482336019227213,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.008823205383848454,
+        "perf_mean": 0.8123541085426851,
+        "aiq": 0.41429133916297833,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.7608997271345056,
+        "aiq_official": 0.7456990724076812
+      },
+      {
+        "dataset": "mmlu",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.0006245503207520295,
+        "perf_mean": 0.9656744053553625,
+        "aiq": 0.9477070746738964,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.00021374999999999996,
+        "perf_mean": 0.4578818998716303,
+        "aiq": 0.45729427827207325,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00010169000000000001,
+        "perf_mean": 0.44480316645271717,
+        "aiq": 0.44480316645271717,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.0003902475,
+        "perf_mean": 0.561525459991442,
+        "aiq": 0.5589082219861865,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0004734182,
+        "perf_mean": 0.46224005134788193,
+        "aiq": 0.459292761810509,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0006280600000000001,
+        "perf_mean": 0.5736392811296535,
+        "aiq": 0.5681112666974735,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0008068624999999999,
+        "perf_mean": 0.6311489088575096,
+        "aiq": 0.6226517800588007,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.00106499,
+        "perf_mean": 0.5679353872486094,
+        "aiq": 0.5571253875332826,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.00068902875,
+        "perf_mean": 0.5048716302952504,
+        "aiq": 0.49934996477438437,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0118859,
+        "perf_mean": 0.5742661531878477,
+        "aiq": 0.42770082107198054,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.010467500000000001,
+        "perf_mean": 0.6157916131792897,
+        "aiq": 0.4777066302727483,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.022990375,
+        "perf_mean": 0.7574176294394523,
+        "aiq": 0.38038390263668487,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.690091039834651,
+        "aiq_official": 0.687038659965215
+      },
+      {
+        "dataset": "mt_bench",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.0034846224499999997,
+        "perf_mean": 0.91875,
+        "aiq": 0.852836035205354,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 8.099367681498829e-05,
+        "perf_mean": 0.3700234192037471,
+        "aiq": 0.36976425778393585,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 4.846088992974239e-05,
+        "perf_mean": 0.3442622950819672,
+        "aiq": 0.3442622950819672,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00017429086651053863,
+        "perf_mean": 0.5409836065573771,
+        "aiq": 0.538349535876792,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.00015602688524590165,
+        "perf_mean": 0.5175644028103045,
+        "aiq": 0.515507258887369,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0002286313817330211,
+        "perf_mean": 0.3864168618266979,
+        "aiq": 0.3834762528871615,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.00033476112412177985,
+        "perf_mean": 0.6533957845433255,
+        "aiq": 0.6448207785116841,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.00048112974238875877,
+        "perf_mean": 0.6042154566744731,
+        "aiq": 0.5916148746279651,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.00029721920374707264,
+        "perf_mean": 0.33021077283372363,
+        "aiq": 0.3265259272182897,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.00427351756440281,
+        "perf_mean": 0.5971896955503513,
+        "aiq": 0.4634865554998426,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.005837620608899297,
+        "perf_mean": 0.6416861826697893,
+        "aiq": 0.4442314254541967,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.009377142857142856,
+        "perf_mean": 0.6861826697892272,
+        "aiq": 0.34486442416812413,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.6655108784488774,
+        "aiq_official": 0.6620715313130927
+      },
+      {
+        "dataset": "mbpp",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.00048286428103044507,
+        "perf_mean": 0.8665105386416861,
+        "aiq": 0.8483601930264619,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.00023176445927106156,
+        "perf_mean": 0.5989842660824537,
+        "aiq": 0.5979710140666719,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00015462358095996815,
+        "perf_mean": 0.5370444134634534,
+        "aiq": 0.5370444134634534,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.0004640234017128062,
+        "perf_mean": 0.6925911173073093,
+        "aiq": 0.683177492375142,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0006001369328818961,
+        "perf_mean": 0.5130452101175065,
+        "aiq": 0.501866119595504,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0006178978689504083,
+        "perf_mean": 0.8753236407090221,
+        "aiq": 0.85529238861665,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0007733787094204342,
+        "perf_mean": 0.7893845847440749,
+        "aiq": 0.7636383459152281,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0006195318064130651,
+        "perf_mean": 0.7667795259908384,
+        "aiq": 0.7491548516147222,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.0006960347440748856,
+        "perf_mean": 0.7092212706632145,
+        "aiq": 0.6895430880316077,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.00619498585939056,
+        "perf_mean": 0.8178649671380203,
+        "aiq": 0.5005087568778546,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.00621885202150966,
+        "perf_mean": 0.31388169687313283,
+        "aiq": 0.19159291580959908,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.007743723361880104,
+        "perf_mean": 0.9023102967536347,
+        "aiq": 0.4601636345210864,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.8778394936419129,
+        "aiq_official": 0.8603111445943247
+      },
+      {
+        "dataset": "hellaswag",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.00032184533439553873,
+        "perf_mean": 0.9844652459669389,
+        "aiq": 0.9788299275717895,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.00010534356748224151,
+        "perf_mean": 0.5288082083662194,
+        "aiq": 0.5279231593059532,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 7.041294396211522e-05,
+        "perf_mean": 0.5659037095501184,
+        "aiq": 0.5659037095501184,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00021123456985003945,
+        "perf_mean": 0.6787687450670876,
+        "aiq": 0.6695608565293705,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.00027320222257300707,
+        "perf_mean": 0.584846093133386,
+        "aiq": 0.5721253685785302,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.00028086314127861095,
+        "perf_mean": 0.7537490134175217,
+        "aiq": 0.7365740751126709,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0003520647198105762,
+        "perf_mean": 0.6408839779005525,
+        "aiq": 0.6200176321874136,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.00028320378847671664,
+        "perf_mean": 0.5169692186266772,
+        "aiq": 0.5050255978378935,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.00031685824782951857,
+        "perf_mean": 0.5027624309392266,
+        "aiq": 0.488837168197535,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0028245177584846097,
+        "perf_mean": 0.5619573796369376,
+        "aiq": 0.3438931149799544,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.002834462509865825,
+        "perf_mean": 0.47750591949486976,
+        "aiq": 0.2915267948453472,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.0035306471981057614,
+        "perf_mean": 0.8587213891081295,
+        "aiq": 0.43792358651942176,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.7973306685181208,
+        "aiq_official": 0.7814292214090005
+      },
+      {
+        "dataset": "winogrande",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.00010707342067876874,
+        "perf_mean": 0.9992107340173638,
+        "aiq": 0.9973984088024876,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.00015857830872483222,
+        "perf_mean": 0.5063422818791946,
+        "aiq": 0.5055319181080051,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 9.307060402684563e-05,
+        "perf_mean": 0.41151006711409394,
+        "aiq": 0.41151006711409394,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00026461836241610737,
+        "perf_mean": 0.519026845637584,
+        "aiq": 0.5156130715475167,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0003359899801342282,
+        "perf_mean": 0.45661073825503357,
+        "aiq": 0.4518678930825161,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0003862934765100671,
+        "perf_mean": 0.5480872483221476,
+        "aiq": 0.5408724723453843,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0005264064429530202,
+        "perf_mean": 0.604765100671141,
+        "aiq": 0.5920063079658954,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0005829670872483222,
+        "perf_mean": 0.6272147651006711,
+        "aiq": 0.6119434752708258,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.0003902915838926175,
+        "perf_mean": 0.5230201342281879,
+        "aiq": 0.5160187649670055,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.004969813691275168,
+        "perf_mean": 0.6508053691275167,
+        "aiq": 0.4666155540120453,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.006041582818791946,
+        "perf_mean": 0.6625838926174497,
+        "aiq": 0.43307384923635783,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.008547322147651006,
+        "perf_mean": 0.6587919463087248,
+        "aiq": 0.3329827201677428,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.6447782819849271,
+        "aiq_official": 0.6377573808031202
+      },
+      {
+        "dataset": "gsm8k",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.0005797541444295302,
+        "perf_mean": 0.7493959731543625,
+        "aiq": 0.731288591750427,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "WizardLM 13B",
+        "kind": "single-llm",
+        "cost_mean": 0.00015034274744027304,
+        "perf_mean": 0.6518771331058021,
+        "aiq": 0.650777914348173,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Mistral 7B",
+        "kind": "single-llm",
+        "cost_mean": 0.0001003585324232082,
+        "perf_mean": 0.6706484641638225,
+        "aiq": 0.6706484641638225,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Mixtral 8x7B",
+        "kind": "single-llm",
+        "cost_mean": 0.00030107559726962453,
+        "perf_mean": 0.8481228668941979,
+        "aiq": 0.8366072574967517,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Code Llama 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0003893911058020478,
+        "perf_mean": 0.6638225255972696,
+        "aiq": 0.6493716337287816,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Yi 34B",
+        "kind": "single-llm",
+        "cost_mean": 0.0004006341296928328,
+        "perf_mean": 0.9001706484641638,
+        "aiq": 0.8796140100194457,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "GPT-3.5",
+        "kind": "single-llm",
+        "cost_mean": 0.0005018097269624573,
+        "perf_mean": 0.8293515358361775,
+        "aiq": 0.8023243889936718,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Claude Instant V1",
+        "kind": "single-llm",
+        "cost_mean": 0.0004023283276450512,
+        "perf_mean": 0.8233788395904437,
+        "aiq": 0.8044431461982898,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Llama 70B",
+        "kind": "single-llm",
+        "cost_mean": 0.00045161339590443685,
+        "perf_mean": 0.7977815699658704,
+        "aiq": 0.7756660583736503,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Claude V1",
+        "kind": "single-llm",
+        "cost_mean": 0.004022341296928327,
+        "perf_mean": 0.909556313993174,
+        "aiq": 0.5566193455331909,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Claude V2",
+        "kind": "single-llm",
+        "cost_mean": 0.004031412969283276,
+        "perf_mean": 0.5964163822525598,
+        "aiq": 0.36443907358623945,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "GPT-4",
+        "kind": "single-llm",
+        "cost_mean": 0.005027952218430034,
+        "perf_mean": 0.9573378839590444,
+        "aiq": 0.48822323176723115,
+        "aiq_official": NaN
+      },
+      {
+        "dataset": "arc",
+        "system": "Zero router",
+        "kind": "router",
+        "cost_mean": NaN,
+        "perf_mean": NaN,
+        "aiq": 0.9207520212361494,
+        "aiq_official": 0.9023736998912788
+      },
+      {
+        "dataset": "arc",
+        "system": "Oracle",
+        "kind": "oracle",
+        "cost_mean": 0.0002286796450511945,
+        "perf_mean": 0.9880546075085325,
+        "aiq": 0.9808354787860035,
+        "aiq_official": NaN
+      }
+    ],
+    "zero_beats_best_single": [
+      {
+        "dataset": "mmlu",
+        "zero_aiq": 0.7608997271345056,
+        "best_single_aiq": 0.707703696610402,
+        "best_single": "Yi 34B",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "mt_bench",
+        "zero_aiq": 0.690091039834651,
+        "best_single_aiq": 0.6226517800588007,
+        "best_single": "GPT-3.5",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "mbpp",
+        "zero_aiq": 0.6655108784488774,
+        "best_single_aiq": 0.6448207785116841,
+        "best_single": "GPT-3.5",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "hellaswag",
+        "zero_aiq": 0.8778394936419129,
+        "best_single_aiq": 0.85529238861665,
+        "best_single": "Yi 34B",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "winogrande",
+        "zero_aiq": 0.7973306685181208,
+        "best_single_aiq": 0.7365740751126709,
+        "best_single": "Yi 34B",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "gsm8k",
+        "zero_aiq": 0.6447782819849271,
+        "best_single_aiq": 0.6119434752708258,
+        "best_single": "Claude Instant V1",
+        "zero_beats_best_single": true
+      },
+      {
+        "dataset": "arc",
+        "zero_aiq": 0.9207520212361494,
+        "best_single_aiq": 0.8796140100194457,
+        "best_single": "Yi 34B",
+        "zero_beats_best_single": true
+      }
+    ],
+    "cost_ratio": [
+      {
+        "dataset": "mmlu",
+        "quality_best": 0.8123541085426851,
+        "quality_threshold": 0.7717364031155508,
+        "n_models_near": 1,
+        "cheapest": "GPT-4",
+        "cost_min": 0.008823205383848454,
+        "priciest": "GPT-4",
+        "cost_max": 0.008823205383848454,
+        "cost_ratio": 1.0
+      },
+      {
+        "dataset": "mt_bench",
+        "quality_best": 0.7574176294394523,
+        "quality_threshold": 0.7195467479674796,
+        "n_models_near": 1,
+        "cheapest": "GPT-4",
+        "cost_min": 0.022990375,
+        "priciest": "GPT-4",
+        "cost_max": 0.022990375,
+        "cost_ratio": 1.0
+      },
+      {
+        "dataset": "mbpp",
+        "quality_best": 0.6861826697892272,
+        "quality_threshold": 0.6518735362997657,
+        "n_models_near": 2,
+        "cheapest": "GPT-3.5",
+        "cost_min": 0.00033476112412177985,
+        "priciest": "GPT-4",
+        "cost_max": 0.009377142857142856,
+        "cost_ratio": 28.011445121481987
+      },
+      {
+        "dataset": "hellaswag",
+        "quality_best": 0.9023102967536347,
+        "quality_threshold": 0.857194781915953,
+        "n_models_near": 2,
+        "cheapest": "Yi 34B",
+        "cost_min": 0.0006178978689504083,
+        "priciest": "GPT-4",
+        "cost_max": 0.007743723361880104,
+        "cost_ratio": 12.532367808670344
+      },
+      {
+        "dataset": "winogrande",
+        "quality_best": 0.8587213891081295,
+        "quality_threshold": 0.8157853196527229,
+        "n_models_near": 1,
+        "cheapest": "GPT-4",
+        "cost_min": 0.0035306471981057614,
+        "priciest": "GPT-4",
+        "cost_max": 0.0035306471981057614,
+        "cost_ratio": 1.0
+      },
+      {
+        "dataset": "gsm8k",
+        "quality_best": 0.6625838926174497,
+        "quality_threshold": 0.6294546979865772,
+        "n_models_near": 3,
+        "cheapest": "Claude V1",
+        "cost_min": 0.004969813691275168,
+        "priciest": "GPT-4",
+        "cost_max": 0.008547322147651006,
+        "cost_ratio": 1.7198475996507447
+      },
+      {
+        "dataset": "arc",
+        "quality_best": 0.9573378839590444,
+        "quality_threshold": 0.9094709897610921,
+        "n_models_near": 2,
+        "cheapest": "Claude V1",
+        "cost_min": 0.004022341296928327,
+        "priciest": "GPT-4",
+        "cost_max": 0.005027952218430034,
+        "cost_ratio": 1.2500063637736671
+      }
+    ]
+  }
+}

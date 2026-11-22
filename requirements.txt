@@ -1,0 +1,5 @@
+# 复现 P0 基线所需的最小依赖
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+scipy>=1.11        # 仅用于正态分布 CDF/PPF（合成数据标定）

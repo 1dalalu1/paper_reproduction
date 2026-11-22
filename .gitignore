@@ -1,0 +1,12 @@
+# 运行产物
+__pycache__/
+*.py[cod]
+_tmp/
+data/surrogate/*.csv
+data/derived/*.json
+results/figures/*.png
+results/tables/*.csv
+
+# 真实数据不入库
+data/raw/*
+!data/raw/.gitkeep
