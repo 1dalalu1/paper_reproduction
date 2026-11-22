@@ -8,7 +8,7 @@
 
 为什么用 Python 的 urllib 而不是 curl / Invoke-WebRequest：
 Windows 沙箱里 curl 走 Schannel 会报 `SEC_E_NO_CREDENTIALS`，Invoke-WebRequest 直接断连；
-Python 用自带的 OpenSSL，配合显式 HTTP 代理可以正常出网。
+Python 用自带的 OpenSSL，配合显式 HTTP 代理可以正常出网
 """
 
 from __future__ import annotations
