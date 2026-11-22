@@ -6,6 +6,7 @@ data/surrogate/*.csv
 data/derived/*.json
 results/figures/*.png
 results/tables/*.csv
+results_real/tables/
 
 # 真实数据不入库
 data/raw/*
